@@ -1,0 +1,11 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+# POssiblité de mettre les définitions de route mais on peut faire autrement
+# home:
+#     path: /
+#     controller: App\Controller\HomeController::index
