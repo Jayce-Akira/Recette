@@ -27,6 +27,13 @@ class CategoryType extends AbstractType
                 'required' => false,
                 'empty_data' => ''
             ])
+            // ->add('recipes', EntityType::class, [
+            //     'class' => Recipe::class,
+            //     'choice_label' => 'title',
+            //     'multiple' => true,
+            //     'expanded' => true,
+            //     'by_reference' => false
+            // ])
             ->add('save', SubmitType::class, [
                 'label' => 'Enregistrer'
             ])
