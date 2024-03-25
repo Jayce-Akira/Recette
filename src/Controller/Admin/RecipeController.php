@@ -21,11 +21,13 @@ class RecipeController extends AbstractController
 {
     #[Route('/', name: 'index')]
     #[IsGranted('ROLE_ADMIN')]
-    public function index(RecipeRepository $repository, CategoryRepository $categoryRepository): Response
+    public function index(RecipeRepository $repository, Request $request): Response
     {
+        $page = $request->query->getInt('page', 1);
         // $this->denyAccessUnlessGranted('ROLE_USER');
-        $recipes = $repository->findWithDurationLowerThan(20);
-
+        // $recipes = $repository->findWithDurationLowerThan(20);
+        $recipes = $repository->paginateRecipe($page);
+        // dd($recipes->count());
         return $this->render('admin/recipe/index.html.twig', [
             'recipes' => $recipes,
         ]);
