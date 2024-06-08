@@ -1,4 +1,4 @@
-// import './bootstrap.js';
+import './bootstrap.js';
 // import canvasConfetti from 'canvas-confetti'
 
 // document.body.addEventListener('click', () => {
@@ -12,4 +12,4 @@
  */
 import './styles/app.css';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+// console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
